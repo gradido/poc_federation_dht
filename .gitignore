@@ -4,3 +4,4 @@
 /build/
 # emacs
 *~
+/yarn-error.log

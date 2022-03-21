@@ -1,1 +1,1 @@
-declare module '@hyperswarm/dht';
+declare module '@hyperswarm/dht'

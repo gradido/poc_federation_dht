@@ -1,0 +1,32 @@
+{
+  "name": "poc_federation_dht",
+  "version": "1.0.0",
+  "description": "Proof of Concept - Federation using DHT",
+  "main": "build/index.js",
+  "repository": "git@github.com:ulfgebhardt/poc_federation_dht.git",
+  "author": "Ulf Gebhardt <ulf.gebhardt@webcraft-media.de>",
+  "license": "UNLICENSED",
+  "private": false,
+  "scripts": {
+    "build": "tsc --build",
+    "clean": "tsc --build --clean",
+    "start": "node build/index.js",
+    "dev": "nodemon -w src --ext ts --exec ts-node src/index.ts",
+    "lint": "eslint --max-warnings=0 --ext .ts ."
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.15.0",
+    "@typescript-eslint/parser": "^5.15.0",
+    "eslint": "^8.11.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.6.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}

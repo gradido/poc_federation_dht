@@ -7,6 +7,7 @@ const TOPIC = DHT.hash(Buffer.from('GRADIDO'))
 const POLLTIME = 20000
 const SUCCESSTIME = 120000
 const ERRORTIME = 240000
+const ANNOUNCETIME = 30000
 const nodeRand = between(1, 99)
 const nodeURL = `https://test${nodeRand}.org`
 const nodeAPI = {
@@ -39,7 +40,10 @@ const main = async () => {
 
   await server.listen()
 
-  await node.announce(TOPIC, keyPair).finished()
+  setInterval(async () => {
+    console.log('Announcing on topic:', TOPIC.toString('hex'))
+    await node.announce(TOPIC, keyPair).finished()
+  }, ANNOUNCETIME)
 
   let successfulRequests: string[] = []
   let errorfulRequests: string[] = []
